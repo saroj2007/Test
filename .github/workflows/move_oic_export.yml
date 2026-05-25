@@ -17,7 +17,7 @@ jobs:
       - name: Move project files
         run: |
           # Replace 'YOUR_EXISTING_FOLDER' with your actual folder name
-          DEST_FOLDER="OID-DEV"
+          DEST_FOLDER="OIC-DEV"
           
           # Create destination if it doesn't exist
           # mkdir -p $DEST_FOLDER
