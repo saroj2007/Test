@@ -1,4 +1,20 @@
 name: OIC Code Validation Pipeline
+on:
+  push:      # Triggers if someone tries a direct push
+    branches: [ TEST-OIC ]
+  pull_request:
+    branches: [ TEST-OIC ]
+
+jobs:
+  block-direct-push:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' # Only runs on direct pushes, NOT PRs
+    steps:
+      - name: Reject Direct Push
+        run: |
+          echo "❌ ERROR: Direct pushes to the 'test' branch are strictly prohibited."
+          echo "Please push your changes to 'dev' and open a Pull Request."
+          exit 1 # Forces the pipeline to fail
 
 # Trigger this workflow whenever a Pull Request is opened or updated against the 'TESt-OIC' branch
 on:
