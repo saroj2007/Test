@@ -1,6 +1,6 @@
 name: OIC Code Validation Pipeline
 on:
-  push:      # Triggers if someone tries a direct push
+  push:     # Triggers if someone tries a direct push
     branches: [ TEST-OIC ]
   pull_request:
     branches: [ TEST-OIC ]
