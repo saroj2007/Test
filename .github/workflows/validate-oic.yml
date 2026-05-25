@@ -1,6 +1,6 @@
 name: OIC Code Validation Pipeline
 
-# Trigger this workflow whenever a Pull Request is opened or updated against the 'TESt-OIC' branch
+# Test Trigger this workflow whenever a Pull Request is opened or updated against the 'TESt-OIC' branch
 on:
   pull_request:
     branches: [ TEST-OIC ]
